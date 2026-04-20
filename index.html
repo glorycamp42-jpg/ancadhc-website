@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>All Nations Corona ADHC · 코로나 한인 성인 주간 보호 센터</title>
+<meta name="description" content="메디칼(Medi-Cal) 100% 지원. 한국어·영어·스페인어 케어. 코로나 캘리포니아의 따뜻한 성인 주간 보호 센터." />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy:    '#1E3A5F',
+          navy2:   '#2A4F7E',
+          sky:     '#4A90C2',
+          ivory:   '#FAF7F2',
+          amber2:  '#D97745',
+          amber3:  '#B85F2D',
+          ink:     '#1F2937',
+          muted:   '#6B7280',
+          softline:'#E8E2D8',
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #FAF7F2; color: #1F2937; font-family: 'Pretendard', 'Inter', system-ui, sans-serif; font-size: 18px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  .font-display { font-family: 'Noto Serif KR', 'Fraunces', Georgia, serif; letter-spacing: -0.01em; }
+  .lead { font-size: 20px; line-height: 1.75; color: #374151; }
+  .btn-primary { background: #D97745; color: #fff; padding: 16px 28px; border-radius: 999px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: all .2s ease; box-shadow: 0 2px 10px rgba(217,119,69,.25); }
+  .btn-primary:hover { background: #B85F2D; box-shadow: 0 6px 20px rgba(217,119,69,.35); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: #1E3A5F; padding: 16px 24px; border-radius: 999px; font-weight: 600; border: 1.5px solid #1E3A5F; display: inline-flex; align-items: center; gap: 10px; transition: all .2s ease; }
+  .btn-ghost:hover { background: #1E3A5F; color: #fff; }
+  .section { padding: 96px 0; }
+  .container-x { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  @media (max-width: 768px) {
+    body { font-size: 17px; }
+    .section { padding: 64px 0; }
+    .lead { font-size: 18px; }
+  }
+  .bg-dots { background-image: radial-gradient(rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 24px 24px; }
+  .hero-overlay { background: linear-gradient(180deg, rgba(30,58,95,0.55) 0%, rgba(30,58,95,0.35) 50%, rgba(30,58,95,0.75) 100%); }
+  .card { transition: all .25s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30,58,95,0.10); }
+  .lang-btn.active { background: #1E3A5F; color: #fff; }
+  .divider-accent { width: 56px; height: 3px; background: #D97745; border-radius: 2px; display: block; margin-bottom: 20px; }
+  .timeline-item { position: relative; padding-top: 28px; }
+  .timeline-item::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: rgba(255,255,255,0.15); }
+  .timeline-item::after { content: ''; position: absolute; top: -6px; left: 0; width: 14px; height: 14px; border-radius: 50%; background: #D97745; border: 3px solid #1E3A5F; }
+  .ph { background-size: cover; background-position: center; border-radius: 16px; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: all .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ===== ADA / WCAG 2.1 AA ===== */
+  /* Visually hidden, available to screen readers */
+  .sr-only {
+    position: absolute !important;
+    width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+  /* Skip link becomes visible on keyboard focus */
+  .focus\:not-sr-only:focus {
+    position: fixed !important;
+    top: 12px; left: 12px;
+    width: auto; height: auto; padding: 12px 20px; margin: 0;
+    overflow: visible; clip: auto; white-space: normal;
+    background: #1E3A5F; color: #fff; font-weight: 600;
+    border-radius: 8px; z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  /* Visible focus indicator for keyboard navigation */
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible,
+  input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 3px solid #D97745;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  /* Respect reduced-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1 !important; transform: none !important; }
+  }
+  /* AA-compliant amber for small text on light backgrounds (≥4.5:1) */
+  .text-amber-ada { color: #B85F2D; }
+  /* aria-pressed state styling on lang buttons */
+  .lang-btn[aria-pressed="true"] { background: #1E3A5F; color: #fff; }
+
+  /* ===== Floating Chatbot ===== */
+  #chat-fab { position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: #D97745; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 28px rgba(217,119,69,.35); z-index: 90; transition: transform .2s ease, background .2s ease; }
+  #chat-fab:hover { transform: translateY(-2px); background: #B85F2D; }
+  #chat-fab svg { width: 26px; height: 26px; }
+  #chat-panel { position: fixed; right: 20px; bottom: 92px; width: 360px; max-width: calc(100vw - 40px); height: 520px; max-height: calc(100vh - 120px); background: #fff; border-radius: 20px; box-shadow: 0 30px 60px rgba(30,58,95,.25); display: none; flex-direction: column; overflow: hidden; z-index: 91; border: 1px solid #ECE5D9; }
+  #chat-panel.open { display: flex; }
+  #chat-panel > header { background: #1E3A5F; color: #fff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  #chat-panel > header .sub { font-size: 12px; color: rgba(255,255,255,.75); margin-top: 2px; }
+  #chat-title { font-weight: 600; font-family: 'Noto Serif KR','Fraunces', Georgia, serif; font-size: 16px; }
+  #chat-close { color: #fff; padding: 4px; line-height: 0; }
+  #chat-close svg { width: 20px; height: 20px; }
+  #chat-log { flex: 1; overflow-y: auto; padding: 14px; background: #FAF7F2; display: flex; flex-direction: column; gap: 10px; }
+  .chat-msg { max-width: 85%; padding: 10px 14px; border-radius: 14px; font-size: 14px; line-height: 1.55; word-break: keep-all; overflow-wrap: break-word; white-space: pre-wrap; }
+  .chat-msg.bot { align-self: flex-start; background: #fff; border: 1px solid #ECE5D9; color: #1F2937; border-bottom-left-radius: 4px; }
+  .chat-msg.user { align-self: flex-end; background: #1E3A5F; color: #fff; border-bottom-right-radius: 4px; }
+  #chat-quick { padding: 8px 12px 4px; display: flex; flex-wrap: wrap; gap: 6px; background: #FAF7F2; }
+  .chat-chip { font-size: 12px; padding: 6px 12px; border-radius: 999px; background: #fff; border: 1px solid #ECE5D9; color: #1E3A5F; cursor: pointer; transition: all .15s; white-space: nowrap; }
+  .chat-chip:hover { background: #1E3A5F; color: #fff; border-color: #1E3A5F; }
+  #chat-form { display: flex; gap: 8px; padding: 12px; background: #fff; border-top: 1px solid #ECE5D9; }
+  #chat-input { flex: 1; padding: 10px 14px; border: 1px solid #ECE5D9; border-radius: 999px; font-size: 14px; background: #FAF7F2; color: #1F2937; }
+  #chat-input:focus { outline: 2px solid #D97745; outline-offset: 1px; border-color: #D97745; }
+  #chat-form button { width: 40px; height: 40px; border-radius: 50%; background: #D97745; color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  #chat-form button:hover { background: #B85F2D; }
+  #chat-form button svg { width: 18px; height: 18px; }
+  @media (max-width: 480px) { #chat-panel { right: 10px; left: 10px; width: auto; bottom: 82px; height: calc(100vh - 110px); } #chat-fab { right: 14px; bottom: 14px; } }
+</style>
+</head>
+
+<body>
+
+<!-- Skip link for keyboard / screen reader users (ADA/WCAG 2.1) -->
+<a href="#main" class="sr-only focus:not-sr-only" data-i18n="a11y.skip">메인 콘텐츠로 바로가기</a>
+
+<!-- TOP STRIP -->
+<div class="bg-navy text-white text-sm" role="region" aria-label="Medi-Cal & 연락처 정보">
+  <div class="container-x flex flex-wrap items-center justify-between py-2 gap-2">
+    <div class="flex items-center gap-2">
+      <i data-lucide="shield-check" class="w-4 h-4 text-amber2"></i>
+      <span data-i18n="topbar.medical">메디칼(Medi-Cal) 가입자 100% 무료 이용</span>
+    </div>
+    <a href="tel:9513398073" class="flex items-center gap-2 hover:text-amber2 transition" aria-label="전화 951-339-8073 · 월요일부터 금요일 오전 8시 30분 오후 12시 30분">
+      <i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>
+      <span class="font-semibold">951-339-8073</span>
+      <span class="opacity-70 hidden sm:inline" data-i18n="topbar.hours">월–금 8:30–12:30</span>
+    </a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-ivory/95 backdrop-blur border-b border-softline">
+  <div class="container-x flex items-center justify-between py-4">
+    <a href="#" class="flex items-center gap-3">
+      <img src="./assets/logo.jpg"
+           alt="All Nations Corona ADHC 로고"
+           class="w-20 h-20 object-contain"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="w-20 h-20 rounded-full bg-navy items-center justify-center" style="display:none;">
+        <span class="font-display text-white text-lg font-semibold">AN</span>
+      </div>
+      <div>
+        <div class="font-display text-navy text-[17px] font-semibold leading-tight">All Nations</div>
+        <div class="text-muted text-xs tracking-wide uppercase hidden xl:block whitespace-nowrap">Corona ADHC</div>
+      </div>
+    </a>
+
+      <button id="mobile-menu-toggle" class="xl:hidden p-2 -mr-2" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" class="w-6 h-6 text-navy" aria-hidden="true"></i>
+      </button>
+      <nav class="hidden xl:flex items-center gap-6 text-[15px] font-medium text-ink whitespace-nowrap" aria-label="주요 메뉴">
+      <a href="#why" class="hover:text-amber2 transition" data-i18n="nav.why">왜 저희인가</a>
+      <a href="#services" class="hover:text-amber2 transition" data-i18n="nav.services">서비스</a>
+      <a href="#day" class="hover:text-amber2 transition" data-i18n="nav.day">하루 일과</a>
+      <a href="#meals" class="hover:text-amber2 transition" data-i18n="nav.meals">식사</a>
+      <a href="#voices" class="hover:text-amber2 transition" data-i18n="nav.voices">가족 후기</a>
+      <a href="#team" class="hover:text-amber2 transition" data-i18n="nav.team">팀 소개</a>
+      <a href="#eligibility" class="hover:text-amber2 transition" data-i18n="nav.eligibility">자격 확인</a>
+      <a href="#contact" class="hover:text-amber2 transition" data-i18n="nav.contact">연락처</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <div class="flex text-xs border border-softline rounded-full overflow-hidden" role="group" aria-label="언어 선택 · Language selector">
+        <button class="lang-btn active px-3 py-1.5 whitespace-nowrap" data-lang="ko" aria-pressed="true" aria-label="한국어로 보기">한국어</button>
+        <button class="lang-btn px-3 py-1.5 whitespace-nowrap" data-lang="en" aria-pressed="false" aria-label="View in English">ENG</button>
+        <button class="lang-btn px-3 py-1.5 whitespace-nowrap" data-lang="es" aria-pressed="false" aria-label="Ver en Español">ES</button>
+      </div>
+      <a href="#contact" class="btn-primary text-sm hidden sm:inline-flex">
+        <i data-lucide="calendar-check" class="w-4 h-4"></i>
+        <span data-i18n="cta.tour" class="whitespace-nowrap">투어 예약</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav dropdown -->
+<div id="mobile-menu" class="xl:hidden hidden bg-ivory border-b border-softline" role="navigation" aria-label="모바일 메뉴">
+  <div class="container-x py-3 flex flex-col gap-1 text-[15px] font-medium text-ink">
+    <a href="#why" class="py-2 hover:text-amber3" data-i18n="nav.why">왜 저희인가</a>
+    <a href="#services" class="py-2 hover:text-amber3" data-i18n="nav.services">서비스</a>
+    <a href="#day" class="py-2 hover:text-amber3" data-i18n="nav.day">하루 일과</a>
+    <a href="#meals" class="py-2 hover:text-amber3" data-i18n="nav.meals">식사</a>
+    <a href="#voices" class="py-2 hover:text-amber3" data-i18n="nav.voices">가족 후기</a>
+    <a href="#team" class="py-2 hover:text-amber3" data-i18n="nav.team">팀 소개</a>
+    <a href="#eligibility" class="py-2 hover:text-amber3" data-i18n="nav.eligibility">자격 확인</a>
+    <a href="#contact" class="py-2 hover:text-amber3" data-i18n="nav.contact">연락처</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<main id="main" role="main">
+<section class="relative overflow-hidden" aria-labelledby="hero-heading">
+  <div class="absolute inset-0" aria-hidden="true">
+    <div class="w-full h-full" style="background-image:url('https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:center;"></div>
+    <div class="hero-overlay absolute inset-0"></div>
+  </div>
+
+  <div class="relative container-x py-28 md:py-40 text-white">
+    <div class="max-w-5xl">
+      <span class="inline-flex items-center gap-2 text-sm tracking-wide uppercase text-amber2 mb-6">
+        <span class="w-8 h-px bg-amber2"></span>
+        <span data-i18n="hero.kicker">코로나 한인 성인 주간 보호 센터</span>
+      </span>
+      <h1 id="hero-heading" class="font-display text-[44px] md:text-[72px] leading-[1.1] font-semibold mb-8" style="word-break:keep-all;overflow-wrap:break-word;" data-i18n="hero.title">
+        부모님이 혼자 계신 시간,<br/>
+        <span class="text-amber2">저희가 함께 있어</span> 드립니다.
+      </h1>
+      <p class="lead text-white/90 mb-10 max-w-2xl" data-i18n="hero.sub">
+        메디칼(Medi-Cal) 100% 지원 · 정갈한 한식·양식 · 한국어·영어·스페인어 케어.
+        자격 간호사와 치료 전문가가 어르신 한 분 한 분을 가족처럼 모십니다.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="tel:9513398073" class="btn-primary">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+          <span data-i18n="hero.cta1">무료 15분 상담</span>
+        </a>
+        <a href="#contact" class="btn-ghost !text-white !border-white/70 hover:!bg-white hover:!text-navy">
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
+          <span data-i18n="hero.cta2">센터 투어 예약</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="bg-white border-y border-softline">
+  <div class="container-x py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-full bg-ivory flex items-center justify-center shrink-0">
+        <i data-lucide="badge-check" class="w-6 h-6 text-navy"></i>
+      </div>
+      <div>
+        <div class="font-semibold text-navy">Medi-Cal</div>
+        <div class="text-sm text-muted" data-i18n="trust.medical">가입자 100% 지원</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-full bg-ivory flex items-center justify-center shrink-0">
+        <i data-lucide="stethoscope" class="w-6 h-6 text-navy"></i>
+      </div>
+      <div>
+        <div class="font-semibold text-navy">CBAS</div>
+        <div class="text-sm text-muted" data-i18n="trust.cbas">커뮤니티 성인 서비스</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-full bg-ivory flex items-center justify-center shrink-0">
+        <i data-lucide="shield" class="w-6 h-6 text-navy"></i>
+      </div>
+      <div>
+        <div class="font-semibold text-navy">CDSS Licensed</div>
+        <div class="text-sm text-muted" data-i18n="trust.cdss">캘리포니아 정식 인가</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-full bg-ivory flex items-center justify-center shrink-0">
+        <i data-lucide="globe" class="w-6 h-6 text-navy"></i>
+      </div>
+      <div>
+        <div class="font-semibold text-navy">3 Languages</div>
+        <div class="text-sm text-muted" data-i18n="trust.lang">한국어·영어·스페인어</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="section bg-ivory">
+  <div class="container-x">
+    <div class="max-w-4xl mb-16">
+      <span class="divider-accent"></span>
+      <p class="text-sm tracking-widest uppercase text-amber3 font-semibold mb-3" data-i18n="why.kicker">왜 저희인가</p>
+      <h2 class="font-display text-[32px] md:text-[48px] font-semibold text-navy leading-tight" data-i18n="why.title">
+        돌봄은 기술이 아니라, 마음입니다.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- C1: 가족 같은 돌봄 — 실제 스태프 사진 -->
+      <div class="card bg-white rounded-2xl overflow-hidden border border-softline">
+        <div class="h-56 bg-ivory bg-cover bg-center relative"
+             style="background-image:url('./assets/staff.jpg'), url('https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80');">
+          <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center shadow-md">
+            <i data-lucide="heart-handshake" class="w-6 h-6 text-navy"></i>
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="font-display text-[22px] font-semibold text-navy mb-3" data-i18n="why.c1.t">가족 같은 돌봄</h3>
+          <p class="text-ink/80" data-i18n="why.c1.d">한 분 한 분을 가족처럼 모십니다. 이름·생신·좋아하시는 음식까지 기억합니다. 어르신이 "여기가 편하다"고 말씀하시는 이유입니다.</p>
+        </div>
+      </div>
+
+      <!-- C2: 의료 전문 팀 -->
+      <div class="card bg-white rounded-2xl overflow-hidden border border-softline">
+        <div class="h-56 bg-cover bg-center relative"
+             style="background-image:url('https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=900&q=80');">
+          <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center shadow-md">
+            <i data-lucide="stethoscope" class="w-6 h-6 text-navy"></i>
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="font-display text-[22px] font-semibold text-navy mb-3" data-i18n="why.c2.t">의료 전문 팀 상주</h3>
+          <p class="text-ink/80" data-i18n="why.c2.d">자격 간호사(RN)가 매일 혈압·혈당을 체크하고 건강 상태를 기록합니다. 물리·작업치료사가 정기적으로 방문해 맞춤 재활을 진행합니다.</p>
+        </div>
+      </div>
+
+      <!-- C3: 정갈한 한식 -->
+      <div class="card bg-white rounded-2xl overflow-hidden border border-softline">
+        <div class="h-56 bg-cover bg-center relative"
+             style="background-image:url('https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=900&q=80');">
+          <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center shadow-md">
+            <i data-lucide="utensils" class="w-6 h-6 text-navy"></i>
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="font-display text-[22px] font-semibold text-navy mb-3" data-i18n="why.c3.t">정갈한 한식이 있는 곳</h3>
+          <p class="text-ink/80" data-i18n="why.c3.d">정갈한 한식과 양식을 매일 번갈아 정성껏 제공합니다. 당뇨·저염·연식 식단은 영양사가 개인 맞춤으로 설계합니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section bg-white">
+  <div class="container-x">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+      <div class="max-w-4xl">
+        <span class="divider-accent"></span>
+        <p class="text-sm tracking-widest uppercase text-amber3 font-semibold mb-3" data-i18n="services.kicker">저희 서비스</p>
+        <h2 class="font-display text-[32px] md:text-[44px] font-semibold text-navy leading-tight lg:whitespace-nowrap" style="word-break:keep-all;overflow-wrap:break-word;" data-i18n="services.title">
+          하루 종일, 어르신을 위한 모든 것.
+        </h2>
+      </div>
+      <a href="tel:9513398073" class="text-navy font-semibold hover:text-amber3 flex items-center gap-2" aria-label="저희 서비스에 대해 전화로 상담받기 951-339-8073">
+        <span data-i18n="services.link">자세히 전화 상담</span>
+        <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card bg-ivory rounded-2xl overflow-hidden border border-softline">
+        <div class="ph h-48" style="background-image:url('https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=900&q=80');border-radius:0;"></div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-amber3 font-semibold mb-2">
+            <i data-lucide="activity" class="w-4 h-4"></i><span data-i18n="svc.1.k">건강 관리</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold text-navy mb-2" data-i18n="svc.1.t">일일 건강 체크</h3>
+          <p class="text-sm text-ink/75" data-i18n="svc.1.d">혈압·혈당·체온을 매일 측정하고, 건강 상태와 증상 변화를 꾸준히 기록·관리합니다.</p>
+        </div>
+      </div>
+
+      <div class="card bg-ivory rounded-2xl overflow-hidden border border-softline">
+        <div class="ph h-48" style="background-image:url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80');border-radius:0;"></div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-amber3 font-semibold mb-2">
+            <i data-lucide="dumbbell" class="w-4 h-4"></i><span data-i18n="svc.2.k">재활</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold text-navy mb-2" data-i18n="svc.2.t">물리·작업 치료</h3>
+          <p class="text-sm text-ink/75" data-i18n="svc.2.d">PT·OT 전문가가 낙상 예방과 근력 회복 프로그램을 개별 설계합니다.</p>
+        </div>
+      </div>
+
+      <div class="card bg-ivory rounded-2xl overflow-hidden border border-softline">
+        <div class="ph h-48" style="background-image:url('https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=900&q=80');border-radius:0;"></div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-amber3 font-semibold mb-2">
+            <i data-lucide="brain" class="w-4 h-4"></i><span data-i18n="svc.3.k">인지 케어</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold text-navy mb-2" data-i18n="svc.3.t">메모리 케어</h3>
+          <p class="text-sm text-ink/75" data-i18n="svc.3.d">경증·중등도 치매 어르신을 위한 익숙한 음악·사진·루틴 중심 프로그램.</p>
+        </div>
+      </div>
+
+      <div class="card bg-ivory rounded-2xl overflow-hidden border border-softline">
+        <div class="ph h-48" style="background-image:url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=80');border-radius:0;"></div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-amber3 font-semibold mb-2">
+            <i data-lucide="palette" class="w-4 h-4"></i><span data-i18n="svc.4.k">예술 활동</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold text-navy mb-2" data-i18n="svc.4.t">미술·음악 프로그램</h3>
+          <p class="text-sm text-ink/75" data-i18n="svc.4.d">매주 2~3회 미술·음악·서예 활동. 기억력·손 근력·감정 표현에 도움.</p>
+        </div>
+      </div>
+
+      <div class="card bg-ivory rounded-2xl overflow-hidden border border-softline">
+        <div class="ph h-48" style="background-image:url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80');border-radius:0;"></div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-amber3 font-semibold mb-2">
+            <i data-lucide="bus" class="w-4 h-4"></i><span data-i18n="svc.5.k">교통</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold text-navy mb-2" data-i18n="svc.5.t">집 앞 픽업·드롭오프</h3>
+          <p class="text-sm text-ink/75" data-i18n="svc.5.d">코로나·리버사이드·노코·이스트베일·미라 로마 지역 무료 왕복 차량.</p>
+        </div>
+      </div>
+
+      <div class="card bg-ivory rounded-2xl overflow-hidden border border-softline">
+        <div class="ph h-48" style="background-image:url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80');border-radius:0;"></div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-sm text-amber3 font-semibold mb-2">
+            <i data-lucide="users" class="w-4 h-4"></i><span data-i18n="svc.6.k">사회적 연결</span>
+          </div>
+          <h3 class="font-display text-xl font-semibold text-navy mb-2" data-i18n="svc.6.t">새 친구들과의 대화</h3>
+          <p class="text-sm text-ink/75" data-i18n="svc.6.d">외로움은 건강의 적입니다. 같은 언어로 마음을 나눌 수 있는 새 친구들과의 시간.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A DAY IN THE LIFE -->
+<section id="day" class="section bg-navy text-white">
+  <div class="container-x">
+    <div class="max-w-4xl mb-16">
+      <span class="divider-accent"></span>
+      <p class="text-sm tracking-widest uppercase text-amber2 font-medium mb-3" data-i18n="day.kicker">하루 일과</p>
+      <h2 class="font-display text-[32px] md:text-[44px] font-semibold leading-tight" style="word-break:keep-all;overflow-wrap:break-word;" data-i18n="day.title">
+        <span class="whitespace-nowrap">오전 8시 30분부터 오후 12시 30분까지,</span><br/>정성이 담긴 하루.
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+      <div class="timeline-item"><div class="text-amber2 font-display text-xl font-semibold mb-1">08:30</div><div class="text-sm text-white/85" data-i18n="day.t1">도착 · 건강 체크 · 아침 식사</div></div>
+      <div class="timeline-item"><div class="text-amber2 font-display text-xl font-semibold mb-1">09:30</div><div class="text-sm text-white/85" data-i18n="day.t2">낱말 퀴즈 · 색칠 공부 (인지 활동)</div></div>
+      <div class="timeline-item"><div class="text-amber2 font-display text-xl font-semibold mb-1">10:00</div><div class="text-sm text-white/85" data-i18n="day.t3">라인댄스 · 가벼운 체조</div></div>
+      <div class="timeline-item"><div class="text-amber2 font-display text-xl font-semibold mb-1">10:45</div><div class="text-sm text-white/85" data-i18n="day.t4">한국 전통 놀이 · 교류 시간</div></div>
+      <div class="timeline-item"><div class="text-amber2 font-display text-xl font-semibold mb-1">11:15</div><div class="text-sm text-white/85" data-i18n="day.t5">우쿨렐레 · 노래 교실</div></div>
+      <div class="timeline-item"><div class="text-amber2 font-display text-xl font-semibold mb-1">11:45</div><div class="text-sm text-white/85" data-i18n="day.t6">점심 식사 · 정갈한 당일 식단</div></div>
+      <div class="timeline-item"><div class="text-amber2 font-display text-xl font-semibold mb-1">12:30</div><div class="text-sm text-white/85" data-i18n="day.t7">귀가 차량 출발</div></div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14">
+      <div class="ph h-40 md:h-56" style="background-image:url('https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?auto=format&fit=crop&w=900&q=80');" title="아침식사 · 낱말퀴즈"></div>
+      <div class="ph h-40 md:h-56" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80');" title="라인댄스 · 체조"></div>
+      <div class="ph h-40 md:h-56" style="background-image:url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=80');" title="우크렐라 · 노래교실"></div>
+      <div class="ph h-40 md:h-56" style="background-image:url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=900&q=80');" title="점심식사 · 전통 게임"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEALS -->
+<section id="meals" class="section bg-ivory">
+  <div class="container-x">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <span class="divider-accent"></span>
+        <p class="text-sm tracking-widest uppercase text-amber3 font-semibold mb-3" data-i18n="meals.kicker">식사</p>
+        <h2 class="font-display text-[32px] md:text-[44px] font-semibold text-navy leading-tight mb-6" data-i18n="meals.title">
+          "여기 밥이 제일 맛있다"는 한 마디.
+        </h2>
+        <p class="lead mb-6" data-i18n="meals.body">
+          정갈한 한식과 양식을 매일 번갈아 정성껏 제공합니다. 영양사가 당뇨식·저염식·연식 식단을 개인별로 맞춤 설계해,
+          어르신께서 안전하고 편안하게 드실 수 있도록 준비합니다. 부모님께 드리고 싶은 집밥 — 저희가 매일 정성으로 차려드립니다.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-amber2 mt-1 shrink-0"></i><span data-i18n="meals.b1">아침·점심 매일 정성껏 제공</span></li>
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-amber2 mt-1 shrink-0"></i><span data-i18n="meals.b2">정갈한 한식 (잡채·국밥·나물·김치) 매일 포함</span></li>
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-amber2 mt-1 shrink-0"></i><span data-i18n="meals.b3">당뇨·저염·연식 등 특수 식단 맞춤</span></li>
+        </ul>
+      </div>
+      <div class="order-1 md:order-2 grid grid-cols-2 gap-4">
+        <div class="ph h-72" style="background-image:url('https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="ph h-72 mt-8" style="background-image:url('https://images.unsplash.com/photo-1553163147-622ab57be1c7?auto=format&fit=crop&w=900&q=80');"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section id="voices" class="section bg-white">
+  <div class="container-x">
+    <div class="grid md:grid-cols-5 gap-12 items-center">
+      <div class="md:col-span-2">
+        <div class="ph h-[480px] rounded-2xl" style="background-image:url('https://images.unsplash.com/photo-1582138825658-00c8e1b6a7a3?auto=format&fit=crop&w=900&q=80');"></div>
+      </div>
+      <div class="md:col-span-3">
+        <i data-lucide="quote" class="w-12 h-12 text-amber2 mb-6"></i>
+        <blockquote class="font-display text-[24px] md:text-[32px] leading-[1.5] text-navy font-medium mb-8" data-i18n="voices.quote">
+          "부모님이 이 센터에 다니신 후부터 다시 웃으세요.
+          직원분들이 진짜 가족처럼 대해주세요.
+          저도 일하는 동안 마음이 한결 편해졌습니다."
+        </blockquote>
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-full bg-ivory flex items-center justify-center">
+            <span class="font-display font-semibold text-navy">김</span>
+          </div>
+          <div>
+            <div class="font-semibold text-navy" data-i18n="voices.name">김*희 님</div>
+            <div class="text-sm text-muted" data-i18n="voices.role">환자 따님 · 코로나 거주</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM (스태프 사진) -->
+<section id="team" class="section bg-ivory">
+  <div class="container-x">
+    <div class="grid lg:grid-cols-5 gap-12 items-center">
+      <div class="lg:col-span-2">
+        <span class="divider-accent"></span>
+        <p class="text-sm tracking-widest uppercase text-amber3 font-semibold mb-3" data-i18n="team.kicker">팀 소개</p>
+        <h2 class="font-display text-[32px] md:text-[44px] font-semibold text-navy leading-tight mb-6" data-i18n="team.title">
+          환영합니다.<br/>저희가 가족이 되어드립니다.
+        </h2>
+        <p class="lead text-ink/80 mb-6" data-i18n="team.body">
+          간호사 · 치료사 · 프로그램 선생님 · 영양사 · 운전 기사까지.
+          All Nations Corona ADHC의 모든 팀원은 어르신을 내 부모님처럼 모시는 마음으로 함께합니다.
+        </p>
+        <ul class="space-y-3 text-ink/85">
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-amber2 mt-1 shrink-0"></i><span data-i18n="team.b1">자격 간호사(RN) 상주 · 매일 건강 관리</span></li>
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-amber2 mt-1 shrink-0"></i><span data-i18n="team.b2">한국어·영어·스페인어 3개 국어 응대 가능</span></li>
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-amber2 mt-1 shrink-0"></i><span data-i18n="team.b3">우크렐라·노래교실 등 프로그램 전담 강사</span></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-3">
+        <div class="relative rounded-2xl overflow-hidden shadow-xl border border-softline bg-white">
+          <img src="./assets/staff.jpg"
+               alt="All Nations Corona ADHC 스태프 — 환영합니다"
+               class="w-full h-auto block"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1400&q=80';" />
+          <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-navy/90 via-navy/50 to-transparent">
+            <div class="text-white font-display text-2xl font-semibold" data-i18n="team.caption">환영합니다 · Welcome · Bienvenidos</div>
+            <div class="text-white/80 text-sm mt-1" data-i18n="team.subcap">All Nations Corona ADHC 팀</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREGIVER BURNOUT -->
+<section class="section bg-gradient-to-b from-ivory to-white">
+  <div class="container-x max-w-3xl text-center">
+    <span class="divider-accent mx-auto"></span>
+    <p class="text-sm tracking-widest uppercase text-amber3 font-semibold mb-4" data-i18n="burn.kicker">돌보는 분께</p>
+    <h2 class="font-display text-[32px] md:text-[48px] font-semibold text-navy leading-tight mb-8" data-i18n="burn.title">
+      당신도 쉴 자격이 있습니다.
+    </h2>
+    <p class="lead text-ink/80 mb-6" data-i18n="burn.p1">
+      "부모님이 하루 종일 혼자 계신 게 늘 마음에 걸립니다."<br/>
+      "일하는 동안에도 불안한 마음이 가시질 않아요."<br/>
+      "저도 잠깐 숨 돌릴 시간이 필요합니다…"
+    </p>
+    <p class="lead text-ink/80 mb-10" data-i18n="burn.p2">
+      당신의 피로는 당연합니다.
+      All Nations ADHC는 어르신뿐 아니라 <strong class="text-navy">가족에게도 '쉼'을 돌려드리는 시스템</strong>입니다.
+    </p>
+    <a href="tel:9513398073" class="btn-primary">
+      <i data-lucide="phone" class="w-5 h-5"></i>
+      <span data-i18n="burn.cta">지금 무료 상담</span>
+    </a>
+  </div>
+</section>
+
+<!-- ELIGIBILITY -->
+<section id="eligibility" class="section bg-navy text-white">
+  <div class="container-x">
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <span class="divider-accent"></span>
+        <p class="text-sm tracking-widest uppercase text-amber2 font-medium mb-3" data-i18n="elig.kicker">자격 빠른 확인</p>
+        <h2 class="font-display text-[32px] md:text-[44px] font-semibold leading-tight mb-6" data-i18n="elig.title">
+          3가지 질문이면,<br/>
+          메디칼 자격이 보입니다.
+        </h2>
+        <p class="lead text-white/80" data-i18n="elig.body">
+          아래 세 질문에 "예"가 많으시다면 메디칼 무료 이용 가능성이 높습니다.
+          정확한 확인은 전화 한 통이면 끝납니다.
+        </p>
+      </div>
+      <div class="bg-white text-ink rounded-2xl p-8 space-y-5">
+        <div class="flex items-start gap-4 pb-4 border-b border-softline">
+          <div class="w-8 h-8 rounded-full bg-amber2 text-white flex items-center justify-center font-semibold shrink-0">1</div>
+          <p class="font-medium text-navy flex-1" data-i18n="elig.q1">만 18세 이상이시고, 메디칼(Medi-Cal)에 가입되어 계신가요?</p>
+        </div>
+        <div class="flex items-start gap-4 pb-4 border-b border-softline">
+          <div class="w-8 h-8 rounded-full bg-amber2 text-white flex items-center justify-center font-semibold shrink-0">2</div>
+          <p class="font-medium text-navy flex-1" data-i18n="elig.q2">당뇨·고혈압·치매·관절염·뇌졸중 등 만성질환이 있으신가요?</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-amber2 text-white flex items-center justify-center font-semibold shrink-0">3</div>
+          <p class="font-medium text-navy flex-1" data-i18n="elig.q3">식사·이동·일상 활동에 도움이 필요하신가요?</p>
+        </div>
+        <a href="tel:9513398073" class="btn-primary w-full justify-center !mt-6">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+          <span data-i18n="elig.cta">전화로 5분 안에 확인</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & MAP -->
+<section id="contact" class="section bg-ivory">
+  <div class="container-x">
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <span class="divider-accent"></span>
+        <p class="text-sm tracking-widest uppercase text-amber3 font-semibold mb-3" data-i18n="contact.kicker">연락처 & 방문</p>
+        <h2 class="font-display text-[32px] md:text-[44px] font-semibold text-navy leading-tight mb-8" data-i18n="contact.title">
+          직접 오셔서 차 한잔 하세요.
+        </h2>
+
+        <div class="space-y-6 mb-8">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-white border border-softline flex items-center justify-center shrink-0">
+              <i data-lucide="phone" class="w-5 h-5 text-navy"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wide text-muted mb-1" data-i18n="contact.phoneLbl">전화</div>
+              <a href="tel:9513398073" class="text-xl font-display font-semibold text-navy hover:text-amber2">951-339-8073</a>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-white border border-softline flex items-center justify-center shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5 text-navy"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wide text-muted mb-1" data-i18n="contact.addrLbl">주소</div>
+              <div class="text-lg text-ink">1138 E 6th St #102<br/>Corona, CA 92879</div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-white border border-softline flex items-center justify-center shrink-0">
+              <i data-lucide="clock" class="w-5 h-5 text-navy"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wide text-muted mb-1" data-i18n="contact.hoursLbl">운영 시간</div>
+              <div class="text-lg text-ink" data-i18n="contact.hours">월–금 · 오전 8시 30분 – 오후 12시 30분</div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-white border border-softline flex items-center justify-center shrink-0">
+              <i data-lucide="mail" class="w-5 h-5 text-navy"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wide text-muted mb-1" data-i18n="contact.emailLbl">이메일</div>
+              <a href="mailto:jenny.park@coronaadhc.com" class="text-lg text-ink hover:text-amber2">jenny.park@coronaadhc.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="tel:9513398073" class="btn-primary">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            <span data-i18n="contact.cta1">무료 상담 전화</span>
+          </a>
+          <a href="https://maps.google.com/?q=1138+E+6th+St+%23102+Corona+CA+92879" target="_blank" class="btn-ghost">
+            <i data-lucide="navigation" class="w-5 h-5"></i>
+            <span data-i18n="contact.cta2">길찾기</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-softline min-h-[480px]">
+        <iframe
+          title="All Nations Corona ADHC 위치 지도 (1138 E 6th St #102, Corona, CA 92879)"
+          src="https://www.google.com/maps/embed/v1/place?key=&q=1138+E+6th+St+%23102+Corona+CA+92879"
+          width="100%" height="100%" style="border:0; min-height:480px;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          onerror="this.style.display='none'"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section bg-navy text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-40 bg-dots"></div>
+  <div class="relative container-x text-center max-w-3xl">
+    <h2 class="font-display text-[32px] md:text-[56px] font-semibold leading-tight mb-6" data-i18n="finalCta.title">
+      오늘 한 통의 전화가,<br/>
+      가족의 오늘을 바꿉니다.
+    </h2>
+    <p class="lead text-white/80 mb-10" data-i18n="finalCta.body">
+      15분이면 메디칼 자격·교통·식사 모두 확인해 드립니다.
+      센터 투어는 언제든 환영입니다.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="tel:9513398073" class="btn-primary">
+        <i data-lucide="phone" class="w-5 h-5"></i>
+        <span>951-339-8073</span>
+      </a>
+      <a href="#contact" class="btn-ghost !text-white !border-white/70 hover:!bg-white hover:!text-navy">
+        <i data-lucide="calendar-check" class="w-5 h-5"></i>
+        <span data-i18n="finalCta.tour">투어 예약</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-white/80 pt-16 pb-10" role="contentinfo" aria-label="사이트 푸터">
+  <div class="container-x grid md:grid-cols-4 gap-10">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-14 h-14 rounded-full bg-white flex items-center justify-center p-1">
+          <img src="./assets/logo.jpg"
+               alt="All Nations Corona ADHC"
+               class="w-full h-full object-contain"
+               onerror="this.outerHTML='<span class=&quot;font-display text-navy text-lg font-semibold&quot;>AN</span>';" />
+        </div>
+        <div>
+          <div class="font-display text-white text-[17px] font-semibold">All Nations Corona ADHC</div>
+          <div class="text-xs tracking-wide uppercase text-white/60">코로나 양로 보건센터 · ADHC</div>
+        </div>
+      </div>
+      <p class="text-sm text-white/70 max-w-md mb-4" data-i18n="footer.about">
+        코로나의 한인·다문화 성인 주간 보호 센터. 메디칼 가입자 100% 지원.
+        한국어·영어·스페인어로 따뜻한 돌봄을 제공합니다.
+      </p>
+      <div class="flex gap-3" role="group" aria-label="소셜 미디어 링크">
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber2" aria-label="Facebook 페이지 방문"><i data-lucide="facebook" class="w-4 h-4" aria-hidden="true"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber2" aria-label="Instagram 페이지 방문"><i data-lucide="instagram" class="w-4 h-4" aria-hidden="true"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-amber2" aria-label="YouTube 채널 방문"><i data-lucide="youtube" class="w-4 h-4" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="text-white font-semibold mb-4" data-i18n="footer.contactTitle">연락처</div>
+      <ul class="space-y-2 text-sm">
+        <li><a href="tel:9513398073" class="hover:text-amber2">951-339-8073</a></li>
+        <li><a href="mailto:jenny.park@coronaadhc.com" class="hover:text-amber2">jenny.park@coronaadhc.com</a></li>
+        <li class="text-white/70">1138 E 6th St #102<br/>Corona, CA 92879</li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-white font-semibold mb-4" data-i18n="footer.linkTitle">바로가기</div>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#services" class="hover:text-amber2" data-i18n="nav.services">서비스</a></li>
+        <li><a href="#day" class="hover:text-amber2" data-i18n="nav.day">하루 일과</a></li>
+        <li><a href="#voices" class="hover:text-amber2" data-i18n="nav.voices">가족 후기</a></li>
+        <li><a href="#eligibility" class="hover:text-amber2" data-i18n="nav.eligibility">자격 확인</a></li>
+        <li><a href="#contact" class="hover:text-amber2" data-i18n="nav.contact">연락처</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-x mt-10 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-4 text-xs text-white/50">
+    <div>© 2026 All Nations Corona ADHC · CDSS Licensed · Medi-Cal / CBAS Provider</div>
+    <div class="flex gap-5">
+      <a href="#" class="hover:text-white" data-i18n="footer.privacy">개인정보</a>
+      <a href="#" class="hover:text-white" data-i18n="footer.accessibility">접근성</a>
+      <a href="#" class="hover:text-white">HIPAA</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating mobile call button -->
+<a href="tel:9513398073" class="fixed bottom-6 right-6 md:hidden z-50 w-14 h-14 rounded-full bg-amber2 text-white flex items-center justify-center shadow-lg" aria-label="무료 상담 전화 걸기 951-339-8073">
+  <i data-lucide="phone" class="w-6 h-6" aria-hidden="true"></i>
+</a>
+
+<script>
+  lucide.createIcons();
+
+  const I18N = {
+    ko: {
+      'a11y.skip':'메인 콘텐츠로 바로가기',
+      'topbar.medical':'메디칼(Medi-Cal) 가입자 100% 무료 이용',
+      'topbar.hours':'월–금 8:30–12:30',
+      'nav.why':'왜 저희인가','nav.services':'서비스','nav.day':'하루 일과','nav.meals':'식사','nav.voices':'가족 후기','nav.team':'팀 소개','nav.eligibility':'자격 확인','nav.contact':'연락처',
+      'cta.tour':'투어 예약',
+      'hero.kicker':'코로나 한인 성인 주간 보호 센터',
+      'hero.title':'부모님이 혼자 계신 시간,<br/><span class="text-amber2">저희가 함께 있어</span> 드립니다.',
+      'hero.sub':'메디칼(Medi-Cal) 100% 지원 · 정갈한 한식·양식 · 한국어·영어·스페인어 케어. 자격 간호사와 치료 전문가가 어르신 한 분 한 분을 가족처럼 모십니다.',
+      'hero.cta1':'무료 15분 상담','hero.cta2':'센터 투어 예약',
+      'trust.medical':'가입자 100% 지원','trust.cbas':'커뮤니티 성인 서비스','trust.cdss':'캘리포니아 정식 인가','trust.lang':'한국어·영어·스페인어',
+      'why.kicker':'왜 저희인가','why.title':'돌봄은 기술이 아니라, 마음입니다.',
+      'why.c1.t':'가족 같은 돌봄','why.c1.d':'한 분 한 분을 가족처럼 모십니다. 이름·생신·좋아하시는 음식까지 기억합니다. 어르신이 "여기가 편하다"고 말씀하시는 이유입니다.',
+      'why.c2.t':'의료 전문 팀 상주','why.c2.d':'자격 간호사(RN)가 매일 혈압·혈당을 체크하고 건강 상태를 기록합니다. 물리·작업치료사가 정기적으로 방문해 맞춤 재활을 진행합니다.',
+      'why.c3.t':'정갈한 한식이 있는 곳','why.c3.d':'정갈한 한식과 양식을 매일 번갈아 정성껏 제공합니다. 당뇨·저염·연식 식단은 영양사가 개인 맞춤으로 설계합니다.',
+      'services.kicker':'저희 서비스','services.title':'하루 종일, 어르신을 위한 모든 것.','services.link':'자세히 전화 상담',
+      'svc.1.k':'건강 관리','svc.1.t':'일일 건강 체크','svc.1.d':'혈압·혈당·체온을 매일 측정하고, 건강 상태와 증상 변화를 꾸준히 기록·관리합니다.',
+      'svc.2.k':'재활','svc.2.t':'물리·작업 치료','svc.2.d':'PT·OT 전문가가 낙상 예방과 근력 회복 프로그램을 개별 설계합니다.',
+      'svc.3.k':'인지 케어','svc.3.t':'메모리 케어','svc.3.d':'경증·중등도 치매 어르신을 위한 익숙한 음악·사진·루틴 중심 프로그램.',
+      'svc.4.k':'예술 활동','svc.4.t':'미술·음악 프로그램','svc.4.d':'매주 2~3회 미술·음악·서예 활동. 기억력·손 근력·감정 표현에 도움.',
+      'svc.5.k':'교통','svc.5.t':'집 앞 픽업·드롭오프','svc.5.d':'코로나·리버사이드·노코·이스트베일·미라 로마 지역 무료 왕복 차량.',
+      'svc.6.k':'사회적 연결','svc.6.t':'새 친구들과의 대화','svc.6.d':'외로움은 건강의 적입니다. 같은 언어로 마음을 나눌 수 있는 새 친구들과의 시간.',
+      'day.kicker':'하루 일과','day.title':'<span class="whitespace-nowrap">오전 8시 30분부터 오후 12시 30분까지,</span><br/>정성이 담긴 하루.',
+      'day.t1':'도착 · 건강 체크 · 아침 식사','day.t2':'낱말 퀴즈 · 색칠 공부 (인지 활동)','day.t3':'라인댄스 · 가벼운 체조','day.t4':'한국 전통 놀이 · 교류 시간','day.t5':'우쿨렐레 · 노래 교실','day.t6':'점심 식사 · 정갈한 당일 식단','day.t7':'귀가 차량 출발',
+      'meals.kicker':'식사','meals.title':'"여기 밥이 제일 맛있다"는 한 마디.',
+      'meals.body':'정갈한 한식과 양식을 매일 번갈아 정성껏 제공합니다. 영양사가 당뇨식·저염식·연식 식단을 개인별로 맞춤 설계해, 어르신께서 안전하고 편안하게 드실 수 있도록 준비합니다. 부모님께 드리고 싶은 집밥 — 저희가 매일 정성으로 차려드립니다.',
+      'meals.b1':'아침·점심 매일 정성껏 제공','meals.b2':'정갈한 한식 (잡채·국밥·나물·김치) 매일 포함','meals.b3':'당뇨·저염·연식 등 특수 식단 맞춤',
+      'voices.quote':'"부모님이 이 센터에 다니신 후부터 다시 웃으세요. 직원분들이 진짜 가족처럼 대해주세요. 저도 일하는 동안 마음이 한결 편해졌습니다."',
+      'voices.name':'김*희 님','voices.role':'환자 따님 · 코로나 거주',
+      'team.kicker':'팀 소개','team.title':'환영합니다.<br/>저희가 가족이 되어드립니다.',
+      'team.body':'간호사 · 치료사 · 프로그램 선생님 · 영양사 · 운전 기사까지. All Nations Corona ADHC의 모든 팀원은 어르신을 내 부모님처럼 모시는 마음으로 함께합니다.',
+      'team.b1':'자격 간호사(RN) 상주 · 매일 건강 관리','team.b2':'한국어·영어·스페인어 3개 국어 응대 가능','team.b3':'우크렐라·노래교실 등 프로그램 전담 강사',
+      'team.caption':'환영합니다 · Welcome · Bienvenidos','team.subcap':'All Nations Corona ADHC 팀',
+      'burn.kicker':'돌보는 분께','burn.title':'당신도 쉴 자격이 있습니다.',
+      'burn.p1':'"부모님이 하루 종일 혼자 계신 게 늘 마음에 걸립니다."<br/>"일하는 동안에도 불안한 마음이 가시질 않아요."<br/>"저도 잠깐 숨 돌릴 시간이 필요합니다…"',
+      'burn.p2':'당신의 피로는 당연합니다. All Nations ADHC는 어르신뿐 아니라 <strong class="text-navy">가족에게도 \'쉼\'을 돌려드리는 시스템</strong>입니다.',
+      'burn.cta':'지금 무료 상담',
+      'elig.kicker':'자격 빠른 확인','elig.title':'3가지 질문이면,<br/>메디칼 자격이 보입니다.',
+      'elig.body':'아래 세 질문에 "예"가 많으시다면 메디칼 무료 이용 가능성이 높습니다. 정확한 확인은 전화 한 통이면 끝납니다.',
+      'elig.q1':'만 18세 이상이시고, 메디칼(Medi-Cal)에 가입되어 계신가요?',
+      'elig.q2':'당뇨·고혈압·치매·관절염·뇌졸중 등 만성질환이 있으신가요?',
+      'elig.q3':'식사·이동·일상 활동에 도움이 필요하신가요?',
+      'elig.cta':'전화로 5분 안에 확인',
+      'contact.kicker':'연락처 & 방문','contact.title':'직접 오셔서 차 한잔 하세요.',
+      'contact.phoneLbl':'전화','contact.addrLbl':'주소','contact.hoursLbl':'운영 시간','contact.emailLbl':'이메일',
+      'contact.hours':'월–금 · 오전 8시 30분 – 오후 12시 30분','contact.cta1':'무료 상담 전화','contact.cta2':'길찾기',
+      'finalCta.title':'오늘 한 통의 전화가,<br/>가족의 오늘을 바꿉니다.',
+      'finalCta.body':'15분이면 메디칼 자격·교통·식사 모두 확인해 드립니다. 센터 투어는 언제든 환영입니다.',
+      'finalCta.tour':'투어 예약',
+      'footer.about':'코로나의 한인·다문화 성인 주간 보호 센터. 메디칼 가입자 100% 지원. 한국어·영어·스페인어로 따뜻한 돌봄을 제공합니다.',
+      'footer.contactTitle':'연락처','footer.linkTitle':'바로가기','footer.privacy':'개인정보','footer.accessibility':'접근성',
+    },
+    en: {
+      'a11y.skip':'Skip to main content',
+      'topbar.medical':'100% covered for Medi-Cal members',
+      'topbar.hours':'Mon–Fri 8:30am–12:30pm',
+      'nav.why':'Why Us','nav.services':'Services','nav.day':'A Day Here','nav.meals':'Meals','nav.voices':'Family Voices','nav.team':'Our Team','nav.eligibility':'Eligibility','nav.contact':'Contact',
+      'cta.tour':'Book a Tour',
+      'hero.kicker':'Korean-American Adult Day Health Care · Corona, CA',
+      'hero.title':'While your parent is alone,<br/><span class="text-amber2">we are with them</span> — as family would.',
+      'hero.sub':'100% Medi-Cal covered · Refined Korean and Western cuisine · Care in Korean, English, and Spanish. Licensed nurses and therapy professionals care for each senior as one of their own.',
+      'hero.cta1':'Free 15-min Consultation','hero.cta2':'Schedule a Tour',
+      'trust.medical':'100% covered','trust.cbas':'Community Adult Services','trust.cdss':'Licensed in California','trust.lang':'Korean · English · Spanish',
+      'why.kicker':'Why Us','why.title':'Care is not a technique — it is love.',
+      'why.c1.t':'Family-Style Care','why.c1.d':'Every guest is known — name, birthday, favorite foods. That is why our seniors say "this place feels like home."',
+      'why.c2.t':'Medical Team On-Site','why.c2.d':'Our Registered Nurse checks vitals and blood sugar daily and documents each resident\'s health status. PT and OT specialists visit regularly to deliver individualized rehabilitation.',
+      'why.c3.t':'Refined Korean Cuisine','why.c3.d':'Refined Korean and Western meals, alternated and served with care each day. Diabetic, low-sodium, and soft-texture diets are individually designed by our registered nutritionist.',
+      'services.kicker':'Our Services','services.title':'Everything for your loved one — all day long.','services.link':'Speak with us directly',
+      'svc.1.k':'Health','svc.1.t':'Daily Health Check','svc.1.d':'Blood pressure, blood sugar, and temperature checked daily. Health status and symptom changes are carefully monitored and documented.',
+      'svc.2.k':'Rehab','svc.2.t':'Physical & Occupational Therapy','svc.2.d':'Custom PT/OT plans to prevent falls and restore strength.',
+      'svc.3.k':'Cognitive Care','svc.3.t':'Memory Care','svc.3.d':'Familiar music, photos, and gentle routines for mild-to-moderate dementia.',
+      'svc.4.k':'Arts','svc.4.t':'Art & Music Programs','svc.4.d':'Painting, music, and calligraphy 2–3 times weekly. Great for memory, dexterity, and emotion.',
+      'svc.5.k':'Transport','svc.5.t':'Door-to-Door Pickup','svc.5.d':'Free transportation across Corona, Riverside, Norco, Eastvale, and Mira Loma.',
+      'svc.6.k':'Connection','svc.6.t':'New Friendships','svc.6.d':'Loneliness harms health. Real conversations with new friends who share the same language.',
+      'day.kicker':'A Day Here','day.title':'From 8:30am to 12:30pm,<br/>a day crafted with care.',
+      'day.t1':'Arrival · health check · breakfast','day.t2':'Word puzzles · coloring (cognitive activity)','day.t3':'Line dance · light stretching','day.t4':'Korean traditional games · social time','day.t5':'Ukulele · singing class','day.t6':'Lunch · thoughtfully prepared daily menu','day.t7':'Transport home',
+      'meals.kicker':'Meals','meals.title':'"Your food tastes the best." — we hear this often.',
+      'meals.body':'Refined Korean and Western meals are alternated and prepared with care every day. Our registered nutritionist individually designs diabetic, low-sodium, and soft-texture diets so each senior can eat safely and comfortably. The kind of homemade food you would want to serve your own parent.',
+      'meals.b1':'Breakfast and lunch prepared with care','meals.b2':'Refined Korean daily (japchae, kimchi, soups, banchan)','meals.b3':'Custom diabetic · low-sodium · soft diets',
+      'voices.quote':'"Since my parent started coming here, they smile again. The staff treat them like family. I finally have peace of mind at work."',
+      'voices.name':'Ms. Kim','voices.role':'Daughter · Corona resident',
+      'team.kicker':'Our Team','team.title':'Welcome.<br/>We become your family.',
+      'team.body':'Nurses, therapists, program instructors, a nutritionist, and drivers — every member of the All Nations Corona ADHC team serves your parent as if they were our own.',
+      'team.b1':'Registered Nurse on-site · daily health management','team.b2':'Service in Korean, English, and Spanish','team.b3':'Dedicated instructors for ukulele, singing, and more',
+      'team.caption':'Welcome · 환영합니다 · Bienvenidos','team.subcap':'The All Nations Corona ADHC Team',
+      'burn.kicker':'For the Caregiver','burn.title':'You deserve rest, too.',
+      'burn.p1':'"I worry about my parent being alone all day."<br/>"I cannot focus at work."<br/>"I just need a moment to breathe…"',
+      'burn.p2':'Your exhaustion is understandable. All Nations ADHC gives <strong class="text-navy">families their rest back</strong> — while their loved ones thrive.',
+      'burn.cta':'Call for Free Consultation',
+      'elig.kicker':'Quick Eligibility Check','elig.title':'Three questions.<br/>That is all it takes.',
+      'elig.body':'If you answer "yes" to most of these, you likely qualify for Medi-Cal coverage at no cost. One phone call confirms it precisely.',
+      'elig.q1':'Are you 18 or older and enrolled in Medi-Cal?',
+      'elig.q2':'Do you have a chronic condition (diabetes, hypertension, dementia, arthritis, post-stroke)?',
+      'elig.q3':'Do you need help with daily activities (meals, mobility, daily routines)?',
+      'elig.cta':'Confirm in 5 minutes by phone',
+      'contact.kicker':'Visit & Contact','contact.title':'Come by for a cup of tea.',
+      'contact.phoneLbl':'Phone','contact.addrLbl':'Address','contact.hoursLbl':'Hours','contact.emailLbl':'Email',
+      'contact.hours':'Mon–Fri · 8:30am – 12:30pm','contact.cta1':'Free Consultation','contact.cta2':'Get Directions',
+      'finalCta.title':'One phone call today<br/>changes tomorrow for your family.',
+      'finalCta.body':'In 15 minutes, we verify Medi-Cal eligibility, transportation, and meal preferences. Center tours always welcome.',
+      'finalCta.tour':'Book a Tour',
+      'footer.about':'A Korean-American and multicultural adult day health center in Corona. 100% Medi-Cal covered. Care in Korean, English, and Spanish.',
+      'footer.contactTitle':'Contact','footer.linkTitle':'Quick Links','footer.privacy':'Privacy','footer.accessibility':'Accessibility',
+    },
+    es: {
+      'a11y.skip':'Saltar al contenido principal',
+      'topbar.medical':'100% cubierto para miembros de Medi-Cal',
+      'topbar.hours':'Lun–Vie 8:30am–12:30pm',
+      'nav.why':'Por qué nosotros','nav.services':'Servicios','nav.day':'Un día aquí','nav.meals':'Comidas','nav.voices':'Familias','nav.team':'Equipo','nav.eligibility':'Elegibilidad','nav.contact':'Contacto',
+      'cta.tour':'Agendar visita',
+      'hero.kicker':'Cuidado Diurno Adulto Coreano-Americano · Corona, CA',
+      'hero.title':'Mientras su ser querido está solo,<br/><span class="text-amber2">estamos con él(ella)</span> — como familia.',
+      'hero.sub':'100% cubierto por Medi-Cal · Cocina coreana y occidental refinada · Atención en coreano, inglés y español. Enfermeras licenciadas y terapeutas profesionales cuidan a cada adulto mayor como si fuera su propia familia.',
+      'hero.cta1':'Consulta gratuita 15 min','hero.cta2':'Visitar el centro',
+      'trust.medical':'100% cubierto','trust.cbas':'Servicios Comunitarios Adultos','trust.cdss':'Licenciado en California','trust.lang':'Coreano · Inglés · Español',
+      'why.kicker':'Por qué nosotros','why.title':'Cuidar no es una técnica — es amor.',
+      'why.c1.t':'Cuidado como familia','why.c1.d':'Conocemos a cada persona: nombre, cumpleaños, comidas favoritas. Por eso dicen "aquí se siente como casa."',
+      'why.c2.t':'Equipo médico en sitio','why.c2.d':'Nuestra Enfermera Registrada (RN) revisa diariamente los signos vitales y la glucosa, y documenta el estado de salud de cada adulto mayor. Terapeutas físicos y ocupacionales visitan con regularidad para brindar rehabilitación personalizada.',
+      'why.c3.t':'Cocina coreana refinada','why.c3.d':'Cocina coreana y occidental refinada, alternada y servida con esmero cada día. Dietas para diabetes, bajas en sodio y de textura suave son diseñadas individualmente por nuestra nutricionista registrada.',
+      'services.kicker':'Servicios','services.title':'Todo para su ser querido — todo el día.','services.link':'Hablar con nosotros',
+      'svc.1.k':'Salud','svc.1.t':'Chequeo diario','svc.1.d':'Presión arterial, glucosa y temperatura medidas diariamente. El estado de salud y los cambios de síntomas se monitorean y documentan con atención.',
+      'svc.2.k':'Rehabilitación','svc.2.t':'Terapia física y ocupacional','svc.2.d':'Planes PT/OT personalizados para prevenir caídas.',
+      'svc.3.k':'Cuidado cognitivo','svc.3.t':'Cuidado de memoria','svc.3.d':'Música, fotos y rutinas suaves para demencia leve a moderada.',
+      'svc.4.k':'Artes','svc.4.t':'Arte y música','svc.4.d':'Pintura, música y caligrafía 2–3 veces por semana.',
+      'svc.5.k':'Transporte','svc.5.t':'Recogida puerta a puerta','svc.5.d':'Transporte gratuito en Corona, Riverside, Norco, Eastvale y Mira Loma.',
+      'svc.6.k':'Conexión','svc.6.t':'Nuevas amistades','svc.6.d':'La soledad daña la salud. Tiempo con nuevos amigos que comparten el mismo idioma.',
+      'day.kicker':'Un día aquí','day.title':'De 8:30am a 12:30pm,<br/>un día lleno de atención.',
+      'day.t1':'Llegada · chequeo de salud · desayuno','day.t2':'Crucigramas · colorear (actividad cognitiva)','day.t3':'Line dance · estiramientos suaves','day.t4':'Juegos tradicionales coreanos · convivencia','day.t5':'Ukulele · clase de canto','day.t6':'Almuerzo · menú cuidadosamente preparado','day.t7':'Transporte de regreso',
+      'meals.kicker':'Comidas','meals.title':'"Aquí la comida es la mejor."',
+      'meals.body':'Cocina coreana y occidental refinada, alternada cada día con esmero. Nuestra nutricionista registrada diseña individualmente dietas para diabetes, bajas en sodio y de textura suave, para que cada adulto mayor pueda comer con seguridad y comodidad. La clase de comida casera que le daría a su propio padre o madre.',
+      'meals.b1':'Desayuno y almuerzo con esmero','meals.b2':'Comida coreana refinada diaria','meals.b3':'Dietas diabéticas · bajas en sodio · suaves',
+      'voices.quote':'"Desde que mi padre/madre viene aquí, vuelve a sonreír. El personal lo(la) trata como familia. Por fin tengo tranquilidad en el trabajo."',
+      'voices.name':'Sra. Kim','voices.role':'Hija · Residente de Corona',
+      'team.kicker':'Nuestro Equipo','team.title':'Bienvenidos.<br/>Somos su familia.',
+      'team.body':'Enfermeras, terapeutas, instructores, nutricionista y conductores — cada miembro del equipo de All Nations Corona ADHC atiende a su ser querido como a los suyos.',
+      'team.b1':'Enfermera Registrada en sitio · cuidado diario','team.b2':'Atención en coreano, inglés y español','team.b3':'Instructores dedicados de ukulele, canto y más',
+      'team.caption':'Bienvenidos · Welcome · 환영합니다','team.subcap':'El equipo de All Nations Corona ADHC',
+      'burn.kicker':'Para el cuidador','burn.title':'Usted también merece descansar.',
+      'burn.p1':'"Me preocupa que mi padre/madre esté solo(a) todo el día."<br/>"No puedo concentrarme en el trabajo."<br/>"Necesito un momento para respirar…"',
+      'burn.p2':'Su cansancio es entendible. All Nations ADHC <strong class="text-navy">devuelve el descanso a las familias</strong>.',
+      'burn.cta':'Consulta gratis ahora',
+      'elig.kicker':'Elegibilidad rápida','elig.title':'Tres preguntas.<br/>Eso es todo.',
+      'elig.body':'Si responde "sí" a la mayoría, probablemente califique para Medi-Cal sin costo.',
+      'elig.q1':'¿Tiene 18 años o más y está inscrito en Medi-Cal?',
+      'elig.q2':'¿Tiene una condición crónica (diabetes, hipertensión, demencia, artritis)?',
+      'elig.q3':'¿Necesita ayuda con actividades diarias (comidas, movilidad, rutinas)?',
+      'elig.cta':'Confirmar en 5 minutos',
+      'contact.kicker':'Contacto','contact.title':'Venga por una taza de té.',
+      'contact.phoneLbl':'Teléfono','contact.addrLbl':'Dirección','contact.hoursLbl':'Horario','contact.emailLbl':'Correo',
+      'contact.hours':'Lun–Vie · 8:30am – 12:30pm','contact.cta1':'Consulta gratuita','contact.cta2':'Cómo llegar',
+      'finalCta.title':'Una llamada hoy<br/>cambia el mañana de su familia.',
+      'finalCta.body':'En 15 minutos verificamos elegibilidad, transporte y preferencias alimenticias. Visitas al centro siempre bienvenidas.',
+      'finalCta.tour':'Agendar visita',
+      'footer.about':'Centro coreano-americano y multicultural de cuidado diurno adulto en Corona. 100% cubierto por Medi-Cal. Atención en coreano, inglés y español.',
+      'footer.contactTitle':'Contacto','footer.linkTitle':'Enlaces rápidos','footer.privacy':'Privacidad','footer.accessibility':'Accesibilidad',
+    },
+  };
+
+  // Language handling
+  const LS_KEY = 'ancadhc_lang';
+  function detectLang() {
+    try {
+      const saved = localStorage.getItem(LS_KEY);
+      if (saved && I18N[saved]) return saved;
+    } catch (e) {}
+    const nav = (navigator.language || 'ko').toLowerCase();
+    if (nav.startsWith('es')) return 'es';
+    if (nav.startsWith('en')) return 'en';
+    return 'ko';
+  }
+
+  function applyI18N(lang) {
+    const dict = I18N[lang] || I18N.ko;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] != null) el.innerHTML = dict[key];
+    });
+    document.documentElement.setAttribute('lang', lang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      const active = btn.getAttribute('data-lang') === lang;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    try { localStorage.setItem(LS_KEY, lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyI18N(btn.getAttribute('data-lang')));
+  });
+
+  applyI18N(detectLang());
+
+  // Mobile menu toggle
+  const mmBtn = document.getElementById('mobile-menu-toggle');
+  const mmPanel = document.getElementById('mobile-menu');
+  if (mmBtn && mmPanel) {
+    mmBtn.addEventListener('click', () => {
+      const open = mmPanel.classList.toggle('hidden') === false;
+      mmBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mmPanel.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mmPanel.classList.add('hidden');
+        mmBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // IntersectionObserver for fade-ins
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in, section').forEach(el => io.observe(el));
+  }
+</script>
+
+
+<!-- =====================  Floating AI Chatbot  ===================== -->
+<button id="chat-fab" type="button" aria-label="도움 챗봇 열기 · Open chatbot" aria-expanded="false" aria-controls="chat-panel">
+  <i data-lucide="message-circle" aria-hidden="true"></i>
+</button>
+<div id="chat-panel" role="dialog" aria-labelledby="chat-title" aria-hidden="true">
+  <header>
+    <div>
+      <div id="chat-title">All Nations 상담봇</div>
+      <div class="sub" id="chat-sub">자주 묻는 질문에 바로 답변드립니다</div>
+    </div>
+    <button id="chat-close" type="button" aria-label="닫기 · Close"><i data-lucide="x" aria-hidden="true"></i></button>
+  </header>
+  <div id="chat-log" role="log" aria-live="polite"></div>
+  <div id="chat-quick" aria-label="자주 묻는 주제"></div>
+  <form id="chat-form" autocomplete="off">
+    <input id="chat-input" type="text" placeholder="궁금한 점을 적어주세요" aria-label="메시지 입력 · Type a message" />
+    <button type="submit" aria-label="보내기 · Send"><i data-lucide="send" aria-hidden="true"></i></button>
+  </form>
+</div>
+
+<script>
+// ===== Chatbot knowledge (KO / EN / ES) =====
+const CHAT = {
+  ko: {
+    title: 'All Nations 상담봇',
+    sub: '자주 묻는 질문에 바로 답변드립니다',
+    placeholder: '궁금한 점을 적어주세요',
+    greet: '안녕하세요! All Nations Corona ADHC 상담봇입니다. 운영 시간·비용·식사·서비스·교통 등 편하게 물어봐 주세요.',
+    fallback: '정확한 상담은 951-339-8073 (월–금 오전 8:30–오후 12:30)으로 전화 주세요.\n이메일: jenny.park@coronaadhc.com',
+    chips: ['운영 시간','비용 / 메디칼','서비스','교통','위치','예약 / 투어'],
+    intents: [
+      { keys: ['운영 시간','운영시간','시간','오픈','언제','몇 시','몇시','영업','근무'], reply: '월요일–금요일, 오전 8시 30분부터 오후 12시 30분까지 운영합니다.' },
+      { keys: ['비용','가격','돈','요금','무료','메디칼','medi-cal','medical','수혜'], reply: 'Medi-Cal 수혜자는 100% 무료입니다. 자격 확인을 저희가 도와드리며, 본인 부담금은 없습니다.' },
+      { keys: ['식사','식단','한식','양식','음식','메뉴','밥','점심'], reply: '매일 당일 조리한 한식·양식을 제공합니다. 영양사가 어르신 건강 상태에 맞춰 식단을 설계합니다.' },
+      { keys: ['서비스','활동','프로그램','무엇','내용'], reply: '간호 케어, 물리·작업 치료, 인지 활동, 음악·체조, 한식·양식 식사, 왕복 차량까지 모두 포함됩니다.' },
+      { keys: ['위치','주소','어디','오시','찾아'], reply: '캘리포니아 Corona 지역에 위치합니다. 정확한 주소·길찾기는 951-339-8073으로 연락 주시면 바로 안내드립니다.' },
+      { keys: ['교통','차량','픽업','셔틀','버스'], reply: '지정 지역 내 왕복 차량을 무료로 제공합니다. 거주지 해당 여부는 전화로 확인해 드립니다.' },
+      { keys: ['자격','조건','elig','나이','가입','등록'], reply: '55세 이상 또는 Medi-Cal 수혜자이면 대부분 이용 가능합니다. 자격 확인과 서류 준비를 저희가 도와드립니다.' },
+      { keys: ['언어','한국어','영어','스페인어','korean','english','spanish','español'], reply: '한국어·영어·스페인어 모두 지원합니다. 편하신 언어로 말씀해 주세요.' },
+      { keys: ['스탭','직원','간호','의료','치료사','team','팀'], reply: '자격 간호사(RN), 물리·작업 치료사, 활동 전문가, 영양사가 상주합니다.' },
+      { keys: ['예약','투어','방문','견학','상담'], reply: '951-339-8073으로 전화 주시면 편하신 시간에 방문 투어를 예약해 드립니다.\n이메일 예약: jenny.park@coronaadhc.com' },
+      { keys: ['연락','연락처','전화','이메일','contact','phone','email'], reply: '전화: 951-339-8073\n이메일: jenny.park@coronaadhc.com\n운영: 월–금 8:30–12:30' },
+      { keys: ['안녕','하이','반가','hello','hi'], reply: '안녕하세요! 무엇이 궁금하신가요? 아래 주제를 눌러보시거나 직접 입력해 주세요.' },
+      { keys: ['감사','고마','thanks','thank'], reply: '감사합니다! 더 궁금한 점이 있으시면 언제든 951-339-8073으로 연락 주세요.' }
+    ]
+  },
+  en: {
+    title: 'All Nations ADHC Chatbot',
+    sub: 'Quick answers to common questions',
+    placeholder: 'Type your question...',
+    greet: "Hi! I'm the All Nations Corona ADHC assistant. Ask me anything about hours, cost, meals, services, or transportation.",
+    fallback: 'For detailed help, please call 951-339-8073 (Mon–Fri 8:30 AM–12:30 PM).\nEmail: jenny.park@coronaadhc.com',
+    chips: ['Hours','Cost / Medi-Cal','Services','Transport','Location','Book a tour'],
+    intents: [
+      { keys: ['hour','open','when','time','schedule'], reply: 'We are open Monday through Friday, 8:30 AM to 12:30 PM.' },
+      { keys: ['cost','price','free','medi-cal','medical','pay','charge'], reply: 'With Medi-Cal, the program is 100% free. We help verify your eligibility — no out-of-pocket cost.' },
+      { keys: ['meal','food','menu','lunch','eat','korean'], reply: 'Fresh Korean and Western meals every day, planned by our dietitian based on each elder\u2019s health needs.' },
+      { keys: ['service','activity','program','offer'], reply: 'Nursing care, PT/OT, cognitive activities, music & light exercise, Korean/Western meals, and door-to-door transportation.' },
+      { keys: ['where','location','address','find','direction'], reply: 'We are located in Corona, California. Please call 951-339-8073 for the exact address and directions.' },
+      { keys: ['transport','ride','pickup','shuttle','bus'], reply: 'Free round-trip transportation within our service area. Please call so we can confirm coverage for your address.' },
+      { keys: ['elig','qualify','age','enroll','sign up'], reply: 'Adults 55+ or Medi-Cal beneficiaries generally qualify. We help with the full eligibility process.' },
+      { keys: ['language','korean','english','spanish'], reply: 'Care is provided in Korean, English, and Spanish. Use whichever language you are most comfortable with.' },
+      { keys: ['staff','nurse','team','therap','dietitian'], reply: 'Our team includes registered nurses (RN), physical/occupational therapists, an activity director, and a dietitian.' },
+      { keys: ['tour','visit','book','appoint','schedule a'], reply: 'Call 951-339-8073 to book an in-person tour at a time that works for you.\nEmail: jenny.park@coronaadhc.com' },
+      { keys: ['contact','phone','email','reach'], reply: 'Phone: 951-339-8073\nEmail: jenny.park@coronaadhc.com\nHours: Mon–Fri 8:30 AM–12:30 PM' },
+      { keys: ['hello','hi','hey'], reply: 'Hello! How can I help today? Tap a topic below or type your question.' },
+      { keys: ['thank'], reply: "You're welcome! Please call 951-339-8073 for anything else." }
+    ]
+  },
+  es: {
+    title: 'Asistente All Nations ADHC',
+    sub: 'Respuestas rápidas a preguntas frecuentes',
+    placeholder: 'Escribe tu pregunta...',
+    greet: '¡Hola! Soy el asistente de All Nations Corona ADHC. Pregúntame sobre horario, costo, comidas, servicios o transporte.',
+    fallback: 'Para ayuda detallada, llame al 951-339-8073 (Lun–Vie 8:30 AM–12:30 PM).\nCorreo: jenny.park@coronaadhc.com',
+    chips: ['Horario','Costo / Medi-Cal','Servicios','Transporte','Ubicación','Reservar visita'],
+    intents: [
+      { keys: ['hora','abier','cuando','tiempo','horario'], reply: 'Estamos abiertos de lunes a viernes, de 8:30 AM a 12:30 PM.' },
+      { keys: ['costo','precio','gratis','medi-cal','medical','pago'], reply: 'Con Medi-Cal, el programa es 100% gratis. Le ayudamos a verificar su elegibilidad sin costo adicional.' },
+      { keys: ['comida','almuerzo','menu','coreana','comer'], reply: 'Comidas coreanas y occidentales frescas todos los días, planificadas por nuestra nutricionista.' },
+      { keys: ['servicio','actividad','programa','ofrec'], reply: 'Enfermería, terapia física/ocupacional, actividades cognitivas, música/ejercicio, comidas y transporte puerta a puerta.' },
+      { keys: ['donde','ubicac','direcc','encontrar'], reply: 'Estamos en Corona, California. Llame al 951-339-8073 para la dirección exacta y cómo llegar.' },
+      { keys: ['transporte','viaje','recoger','shuttle','autobus'], reply: 'Transporte ida y vuelta gratuito dentro de nuestra área. Llame para confirmar cobertura de su vecindario.' },
+      { keys: ['eleg','calific','edad','inscri','registr'], reply: 'Adultos de 55+ o beneficiarios de Medi-Cal generalmente califican. Le ayudamos con toda la verificación.' },
+      { keys: ['idioma','coreano','ingl','espan'], reply: 'Atención en coreano, inglés y español. Hable en el idioma con el que se sienta más cómodo.' },
+      { keys: ['personal','enferm','equipo','terap','nutric'], reply: 'Nuestro equipo incluye enfermeras (RN), terapeutas PT/OT, director de actividades y nutricionista.' },
+      { keys: ['visita','tour','reserv','cita'], reply: 'Llame al 951-339-8073 para reservar una visita presencial.\nCorreo: jenny.park@coronaadhc.com' },
+      { keys: ['contact','telefono','correo','email'], reply: 'Teléfono: 951-339-8073\nCorreo: jenny.park@coronaadhc.com\nHorario: Lun–Vie 8:30 AM–12:30 PM' },
+      { keys: ['hola','buen'], reply: '¡Hola! ¿En qué puedo ayudar? Toque un tema abajo o escriba su pregunta.' },
+      { keys: ['gracias'], reply: '¡De nada! Para más, llame al 951-339-8073.' }
+    ]
+  }
+};
+
+function chatDict(){ return CHAT[typeof currentLang!=='undefined' ? currentLang : 'ko'] || CHAT.ko; }
+
+function chatRespond(text){
+  const dict = chatDict();
+  const lower = (text||'').toLowerCase();
+  for (const intent of dict.intents) {
+    for (const k of intent.keys) {
+      if (lower.includes(k.toLowerCase())) return intent.reply;
+    }
+  }
+  return dict.fallback;
+}
+
+function chatAppend(text, role){
+  const log = document.getElementById('chat-log');
+  if (!log) return;
+  const m = document.createElement('div');
+  m.className = 'chat-msg ' + role;
+  m.textContent = text;
+  log.appendChild(m);
+  log.scrollTop = log.scrollHeight;
+}
+
+function chatRenderChips(){
+  const row = document.getElementById('chat-quick');
+  if (!row) return;
+  row.innerHTML = '';
+  chatDict().chips.forEach(t => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chat-chip'; b.textContent = t;
+    b.addEventListener('click', () => {
+      chatAppend(t, 'user');
+      setTimeout(() => chatAppend(chatRespond(t), 'bot'), 350);
+    });
+    row.appendChild(b);
+  });
+}
+
+function chatSyncLang(){
+  const d = chatDict();
+  const t = document.getElementById('chat-title'); if (t) t.textContent = d.title;
+  const s = document.getElementById('chat-sub'); if (s) s.textContent = d.sub;
+  const i = document.getElementById('chat-input'); if (i) i.placeholder = d.placeholder;
+  const fab = document.getElementById('chat-fab');
+  if (fab) fab.setAttribute('aria-label', d.title);
+  chatRenderChips();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const fab = document.getElementById('chat-fab');
+  const panel = document.getElementById('chat-panel');
+  const close = document.getElementById('chat-close');
+  const form = document.getElementById('chat-form');
+  const input = document.getElementById('chat-input');
+  if (!fab || !panel) return;
+  let greeted = false;
+  fab.addEventListener('click', () => {
+    const open = panel.classList.toggle('open');
+    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+    fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open && !greeted) { chatAppend(chatDict().greet, 'bot'); greeted = true; }
+    if (open && input) setTimeout(() => input.focus(), 150);
+  });
+  close.addEventListener('click', () => {
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden', 'true');
+    fab.setAttribute('aria-expanded', 'false');
+  });
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const t = input.value.trim(); if (!t) return;
+    chatAppend(t, 'user');
+    input.value = '';
+    setTimeout(() => chatAppend(chatRespond(t), 'bot'), 400);
+  });
+  chatSyncLang();
+  if (window.lucide) window.lucide.createIcons();
+        if (typeof chatSyncLang === 'function') chatSyncLang();
+});
+</script>
+
+</body>
+</html>
