@@ -19,7 +19,7 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 
 <script>
-  tailwind.config = {
+  tailwind.config = {h
     theme: {
       extend: {
         colors: {
@@ -664,7 +664,7 @@
             </div>
             <div>
               <div class="text-xs uppercase tracking-wide text-muted mb-1" data-i18n="contact.emailLbl">이메일</div>
-              <a href="mailto:jenny.park@coronaadhc.com" class="text-lg text-ink hover:text-amber2">jenny.park@coronaadhc.com</a>
+              <a href="mailto:allnationscenter@coronaadhc.com" class="text-lg text-ink hover:text-amber2">allnationscenter@coronaadhc.com</a>
             </div>
           </div>
         </div>
@@ -750,7 +750,7 @@
       <div class="text-white font-semibold mb-4" data-i18n="footer.contactTitle">연락처</div>
       <ul class="space-y-2 text-sm">
         <li><a href="tel:9513398073" class="hover:text-amber2">951-339-8073</a></li>
-        <li><a href="mailto:jenny.park@coronaadhc.com" class="hover:text-amber2">jenny.park@coronaadhc.com</a></li>
+        <li><a href="mailto:allnationscenter@coronaadhc.com" class="hover:text-amber2">allnationscenter@coronaadhc.com</a></li>
         <li class="text-white/70">1138 E 6th St #102<br/>Corona, CA 92879</li>
       </ul>
     </div>
@@ -1035,7 +1035,7 @@ const CHAT = {
     sub: '자주 묻는 질문에 바로 답변드립니다',
     placeholder: '궁금한 점을 적어주세요',
     greet: '안녕하세요! All Nations Corona ADHC 상담봇입니다. 운영 시간·비용·식사·서비스·교통 등 편하게 물어봐 주세요.',
-    fallback: '정확한 상담은 951-339-8073 (월–금 오전 8:30–오후 12:30)으로 전화 주세요.\n이메일: jenny.park@coronaadhc.com',
+    fallback: '정확한 상담은 951-339-8073 (월–금 오전 8:30–오후 12:30)으로 전화 주세요.\n이메일: allnationscenter@coronaadhc.com',
     chips: ['운영 시간','비용 / 메디칼','서비스','교통','위치','예약 / 투어'],
     intents: [
       { keys: ['운영 시간','운영시간','시간','오픈','언제','몇 시','몇시','영업','근무'], reply: '월요일–금요일, 오전 8시 30분부터 오후 12시 30분까지 운영합니다.' },
@@ -1047,8 +1047,8 @@ const CHAT = {
       { keys: ['자격','조건','elig','나이','가입','등록'], reply: '55세 이상 또는 Medi-Cal 수혜자이면 대부분 이용 가능합니다. 자격 확인과 서류 준비를 저희가 도와드립니다.' },
       { keys: ['언어','한국어','영어','스페인어','korean','english','spanish','español'], reply: '한국어·영어·스페인어 모두 지원합니다. 편하신 언어로 말씀해 주세요.' },
       { keys: ['스탭','직원','간호','의료','치료사','team','팀'], reply: '자격 간호사(RN), 물리·작업 치료사, 활동 전문가, 영양사가 상주합니다.' },
-      { keys: ['예약','투어','방문','견학','상담'], reply: '951-339-8073으로 전화 주시면 편하신 시간에 방문 투어를 예약해 드립니다.\n이메일 예약: jenny.park@coronaadhc.com' },
-      { keys: ['연락','연락처','전화','이메일','contact','phone','email'], reply: '전화: 951-339-8073\n이메일: jenny.park@coronaadhc.com\n운영: 월–금 8:30–12:30' },
+      { keys: ['예약','투어','방문','견학','상담'], reply: '951-339-8073으로 전화 주시면 편하신 시간에 방문 투어를 예약해 드립니다.\n이메일 예약: allnationscenter@coronaadhc.com' },
+      { keys: ['연락','연락처','전화','이메일','contact','phone','email'], reply: '전화: 951-339-8073\n이메일: allnationscenter@coronaadhc.com\n운영: 월–금 8:30–12:30' },
       { keys: ['안녕','하이','반가','hello','hi'], reply: '안녕하세요! 무엇이 궁금하신가요? 아래 주제를 눌러보시거나 직접 입력해 주세요.' },
       { keys: ['감사','고마','thanks','thank'], reply: '감사합니다! 더 궁금한 점이 있으시면 언제든 951-339-8073으로 연락 주세요.' }
     ]
@@ -1058,7 +1058,7 @@ const CHAT = {
     sub: 'Quick answers to common questions',
     placeholder: 'Type your question...',
     greet: "Hi! I'm the All Nations Corona ADHC assistant. Ask me anything about hours, cost, meals, services, or transportation.",
-    fallback: 'For detailed help, please call 951-339-8073 (Mon–Fri 8:30 AM–12:30 PM).\nEmail: jenny.park@coronaadhc.com',
+    fallback: 'For detailed help, please call 951-339-8073 (Mon–Fri 8:30 AM–12:30 PM).\nEmail: allnationscenter@coronaadhc.com',
     chips: ['Hours','Cost / Medi-Cal','Services','Transport','Location','Book a tour'],
     intents: [
       { keys: ['hour','open','when','time','schedule'], reply: 'We are open Monday through Friday, 8:30 AM to 12:30 PM.' },
@@ -1070,8 +1070,8 @@ const CHAT = {
       { keys: ['elig','qualify','age','enroll','sign up'], reply: 'Adults 55+ or Medi-Cal beneficiaries generally qualify. We help with the full eligibility process.' },
       { keys: ['language','korean','english','spanish'], reply: 'Care is provided in Korean, English, and Spanish. Use whichever language you are most comfortable with.' },
       { keys: ['staff','nurse','team','therap','dietitian'], reply: 'Our team includes registered nurses (RN), physical/occupational therapists, an activity director, and a dietitian.' },
-      { keys: ['tour','visit','book','appoint','schedule a'], reply: 'Call 951-339-8073 to book an in-person tour at a time that works for you.\nEmail: jenny.park@coronaadhc.com' },
-      { keys: ['contact','phone','email','reach'], reply: 'Phone: 951-339-8073\nEmail: jenny.park@coronaadhc.com\nHours: Mon–Fri 8:30 AM–12:30 PM' },
+      { keys: ['tour','visit','book','appoint','schedule a'], reply: 'Call 951-339-8073 to book an in-person tour at a time that works for you.\nEmail: allnationscenter@coronaadhc.com' },
+      { keys: ['contact','phone','email','reach'], reply: 'Phone: 951-339-8073\nEmail: allnationscenter@coronaadhc.com\nHours: Mon–Fri 8:30 AM–12:30 PM' },
       { keys: ['hello','hi','hey'], reply: 'Hello! How can I help today? Tap a topic below or type your question.' },
       { keys: ['thank'], reply: "You're welcome! Please call 951-339-8073 for anything else." }
     ]
@@ -1081,7 +1081,7 @@ const CHAT = {
     sub: 'Respuestas rápidas a preguntas frecuentes',
     placeholder: 'Escribe tu pregunta...',
     greet: '¡Hola! Soy el asistente de All Nations Corona ADHC. Pregúntame sobre horario, costo, comidas, servicios o transporte.',
-    fallback: 'Para ayuda detallada, llame al 951-339-8073 (Lun–Vie 8:30 AM–12:30 PM).\nCorreo: jenny.park@coronaadhc.com',
+    fallback: 'Para ayuda detallada, llame al 951-339-8073 (Lun–Vie 8:30 AM–12:30 PM).\nCorreo: allnationscenter@coronaadhc.com',
     chips: ['Horario','Costo / Medi-Cal','Servicios','Transporte','Ubicación','Reservar visita'],
     intents: [
       { keys: ['hora','abier','cuando','tiempo','horario'], reply: 'Estamos abiertos de lunes a viernes, de 8:30 AM a 12:30 PM.' },
@@ -1093,8 +1093,8 @@ const CHAT = {
       { keys: ['eleg','calific','edad','inscri','registr'], reply: 'Adultos de 55+ o beneficiarios de Medi-Cal generalmente califican. Le ayudamos con toda la verificación.' },
       { keys: ['idioma','coreano','ingl','espan'], reply: 'Atención en coreano, inglés y español. Hable en el idioma con el que se sienta más cómodo.' },
       { keys: ['personal','enferm','equipo','terap','nutric'], reply: 'Nuestro equipo incluye enfermeras (RN), terapeutas PT/OT, director de actividades y nutricionista.' },
-      { keys: ['visita','tour','reserv','cita'], reply: 'Llame al 951-339-8073 para reservar una visita presencial.\nCorreo: jenny.park@coronaadhc.com' },
-      { keys: ['contact','telefono','correo','email'], reply: 'Teléfono: 951-339-8073\nCorreo: jenny.park@coronaadhc.com\nHorario: Lun–Vie 8:30 AM–12:30 PM' },
+      { keys: ['visita','tour','reserv','cita'], reply: 'Llame al 951-339-8073 para reservar una visita presencial.\nCorreo: allnationscenter@coronaadhc.com' },
+      { keys: ['contact','telefono','correo','email'], reply: 'Teléfono: 951-339-8073\nCorreo: allnationscenter@coronaadhc.com\nHorario: Lun–Vie 8:30 AM–12:30 PM' },
       { keys: ['hola','buen'], reply: '¡Hola! ¿En qué puedo ayudar? Toque un tema abajo o escriba su pregunta.' },
       { keys: ['gracias'], reply: '¡De nada! Para más, llame al 951-339-8073.' }
     ]
