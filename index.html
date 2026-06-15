@@ -55,7 +55,7 @@
     .lead { font-size: 18px; }
   }
   .bg-dots { background-image: radial-gradient(rgba(255,255,255,0.18) 1px, transparent 1px); background-size: 24px 24px; }
-  .hero-overlay { background: linear-gradient(180deg, rgba(30,58,95,0.55) 0%, rgba(30,58,95,0.35) 50%, rgba(30,58,95,0.75) 100%); }
+  .hero-overlay { background: linear-gradient(90deg, rgba(30,58,95,0.82) 0%, rgba(30,58,95,0.50) 45%, rgba(30,58,95,0.15) 100%), linear-gradient(180deg, rgba(30,58,95,0.45) 0%, rgba(30,58,95,0.30) 50%, rgba(30,58,95,0.72) 100%); }
   .card { transition: all .25s ease; }
   .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30,58,95,0.10); }
   .lang-btn.active { background: #1E3A5F; color: #fff; }
@@ -217,7 +217,7 @@
 <main id="main" role="main">
 <section class="relative overflow-hidden" aria-labelledby="hero-heading">
   <div class="absolute inset-0" aria-hidden="true">
-    <div class="w-full h-full" style="background-image:url('https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:center;"></div>
+    <video class="w-full h-full object-cover" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg"><source src="assets/hero.webm" type="video/webm"><source src="assets/hero.mp4" type="video/mp4"></video>
     <div class="hero-overlay absolute inset-0"></div>
   </div>
 
